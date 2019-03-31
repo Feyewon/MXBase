@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
 s.name             = 'MXBase'
-s.version          = '0.1.0'
+s.version          = '0.2.0'
 s.summary          = '基础组件库'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -78,6 +78,10 @@ end
 s.subspec 'Refresh' do |refresh|
     refresh.source_files = 'MXBase/Classes/Refresh/**/*'
     refresh.dependency 'MJRefresh'
+end
+
+s.subspec 'BeeHive' do |bh|
+    bh.dependency 'BeeHive'
 end
 
 s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
