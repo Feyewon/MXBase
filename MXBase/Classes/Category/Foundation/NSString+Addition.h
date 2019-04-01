@@ -68,5 +68,5 @@
 - (NSString *)timeToStringV2Withformat:(NSString *)format;
 - (NSString *)formatTimeStampWithFormat:(NSString *)format;
 
-- (NSString *)getModuleImagePathWithName:(NSString *)imageName;
+- (NSString *)getModuleImagePathWithBundleClass:(Class)bundleClass;
 @end

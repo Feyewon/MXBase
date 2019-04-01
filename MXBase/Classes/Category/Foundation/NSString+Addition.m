@@ -374,11 +374,11 @@
     return dateString;
 }
 
-- (NSString *)getModuleImagePathWithName:(NSString *)imageName {
+- (NSString *)getModuleImagePathWithBundleClass:(Class)bundleClass {
     
     NSInteger scale = [UIScreen mainScreen].scale;
-    imageName = [NSString stringWithFormat:@"%@@%zdx.png",imageName,scale];
-    NSBundle *currentBundle = [NSBundle bundleForClass:[self class]];
+    imageName = [NSString stringWithFormat:@"%@@%zdx.png",self,scale];
+    NSBundle *currentBundle = [NSBundle bundleForClass:bundleClass];
     NSString *currentBundleName = currentBundle.infoDictionary[@"CFBundleName"];
     return [currentBundle pathForResource:imageName ofType:nil inDirectory:[NSString stringWithFormat:@"%@.bundle",currentBundleName]];
 }
