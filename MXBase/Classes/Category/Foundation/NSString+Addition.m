@@ -377,7 +377,7 @@
 - (NSString *)getModuleImagePathWithBundleClass:(Class)bundleClass {
     
     NSInteger scale = [UIScreen mainScreen].scale;
-    imageName = [NSString stringWithFormat:@"%@@%zdx.png",self,scale];
+    NSString *imageName = [NSString stringWithFormat:@"%@@%zdx.png",self,scale];
     NSBundle *currentBundle = [NSBundle bundleForClass:bundleClass];
     NSString *currentBundleName = currentBundle.infoDictionary[@"CFBundleName"];
     return [currentBundle pathForResource:imageName ofType:nil inDirectory:[NSString stringWithFormat:@"%@.bundle",currentBundleName]];
