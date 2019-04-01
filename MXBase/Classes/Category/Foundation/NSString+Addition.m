@@ -373,4 +373,15 @@
     NSString *dateString       = [formatter stringFromDate: date];
     return dateString;
 }
+
+- (NSString *)getModuleImagePathWithName:(NSString *)imageName {
+    
+    NSInteger scale = [UIScreen mainScreen].scale;
+    imageName = [NSString stringWithFormat:@"%@@%zdx.png",imageName,scale];
+    NSBundle *currentBundle = [NSBundle bundleForClass:[self class]];
+    NSString *currentBundleName = currentBundle.infoDictionary[@"CFBundleName"];
+    return [currentBundle pathForResource:imageName ofType:nil inDirectory:[NSString stringWithFormat:@"%@.bundle",currentBundleName]];
+}
+
+
 @end
