@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
 s.name             = 'MXBase'
-s.version          = '0.6.0'
+s.version          = '0.7.0'
 s.summary          = '基础组件库'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -94,7 +94,6 @@ s.subspec 'MenuPage' do |pvc|
 end
 
 s.subspec 'Parser' do |ps|
-    ps.source_files = 'MXBase/Classes/Parser/**/*'
     ps.dependency 'MJExtension'
 end
 

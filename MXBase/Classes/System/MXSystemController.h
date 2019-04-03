@@ -15,6 +15,8 @@
 + (BOOL)isRetina;
 + (float)scale;
 + (NSString *)resolution; // 分辨率
++ (float)screenWidth;
++ (float)screenHeight;
 + (NSString *)osVersion;
 + (NSString *)bundleIdentifier;
 + (NSString *)networkingState;
