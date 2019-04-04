@@ -37,4 +37,13 @@
     return (KHNavigationController *)vc;
 }
 
+
+- (UIBarButtonItem *)kh_customBackItemWithTarget:(id)target action:(SEL)action
+{
+    return [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"common_screen_change_icon"]
+                                            style:UIBarButtonItemStylePlain target:target action:action];
+}
+
+
+
 @end
