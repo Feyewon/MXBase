@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
 s.name             = 'MXBase'
-s.version          = '0.7.0'
+s.version          = '0.8.0'
 s.summary          = '基础组件库'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -95,6 +95,10 @@ end
 
 s.subspec 'Parser' do |ps|
     ps.dependency 'MJExtension'
+end
+
+s.subspec 'NavigationVC' do |nvc|
+    nvc.source_files = 'MXBase/Classes/NavigationVC/**/*'
 end
 
 s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }

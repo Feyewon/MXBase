@@ -5,48 +5,50 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.16)
   - MJRefresh (3.1.16)
-  - MXBase (0.5.0):
-    - MXBase/Alert (= 0.5.0)
-    - MXBase/AttributeStringTool (= 0.5.0)
-    - MXBase/Base (= 0.5.0)
-    - MXBase/BeeHive (= 0.5.0)
-    - MXBase/BlockTool (= 0.5.0)
-    - MXBase/Category (= 0.5.0)
-    - MXBase/CustomView (= 0.5.0)
-    - MXBase/EmptyView (= 0.5.0)
-    - MXBase/ErrorLoadingView (= 0.5.0)
-    - MXBase/Helpers (= 0.5.0)
-    - MXBase/KvoController (= 0.5.0)
-    - MXBase/MenuPage (= 0.5.0)
-    - MXBase/Parser (= 0.5.0)
-    - MXBase/Refresh (= 0.5.0)
-    - MXBase/System (= 0.5.0)
-    - MXBase/Toast (= 0.5.0)
-  - MXBase/Alert (0.5.0)
-  - MXBase/AttributeStringTool (0.5.0)
-  - MXBase/Base (0.5.0):
+  - MXBase (0.7.0):
+    - MXBase/Alert (= 0.7.0)
+    - MXBase/AttributeStringTool (= 0.7.0)
+    - MXBase/Base (= 0.7.0)
+    - MXBase/BeeHive (= 0.7.0)
+    - MXBase/BlockTool (= 0.7.0)
+    - MXBase/Category (= 0.7.0)
+    - MXBase/CustomView (= 0.7.0)
+    - MXBase/EmptyView (= 0.7.0)
+    - MXBase/ErrorLoadingView (= 0.7.0)
+    - MXBase/Helpers (= 0.7.0)
+    - MXBase/KvoController (= 0.7.0)
+    - MXBase/MenuPage (= 0.7.0)
+    - MXBase/NavigationVC (= 0.7.0)
+    - MXBase/Parser (= 0.7.0)
+    - MXBase/Refresh (= 0.7.0)
+    - MXBase/System (= 0.7.0)
+    - MXBase/Toast (= 0.7.0)
+  - MXBase/Alert (0.7.0)
+  - MXBase/AttributeStringTool (0.7.0)
+  - MXBase/Base (0.7.0):
     - UICKeyChainStore
-  - MXBase/BeeHive (0.5.0):
+  - MXBase/BeeHive (0.7.0):
     - BeeHive
-  - MXBase/BlockTool (0.5.0)
-  - MXBase/Category (0.5.0)
-  - MXBase/CustomView (0.5.0)
-  - MXBase/EmptyView (0.5.0)
-  - MXBase/ErrorLoadingView (0.5.0):
+  - MXBase/BlockTool (0.7.0)
+  - MXBase/Category (0.7.0)
+  - MXBase/CustomView (0.7.0)
+  - MXBase/EmptyView (0.7.0)
+  - MXBase/ErrorLoadingView (0.7.0):
     - Masonry
     - MBProgressHUD
-  - MXBase/Helpers (0.5.0)
-  - MXBase/KvoController (0.5.0)
-  - MXBase/MenuPage (0.5.0):
+  - MXBase/Helpers (0.7.0)
+  - MXBase/KvoController (0.7.0)
+  - MXBase/MenuPage (0.7.0):
     - WMPageController
-  - MXBase/Parser (0.5.0):
+  - MXBase/NavigationVC (0.7.0)
+  - MXBase/Parser (0.7.0):
     - MJExtension
-  - MXBase/Refresh (0.5.0):
+  - MXBase/Refresh (0.7.0):
     - MJRefresh
-  - MXBase/System (0.5.0):
+  - MXBase/System (0.7.0):
     - AFNetworking/Reachability
     - MXBase/Base
-  - MXBase/Toast (0.5.0)
+  - MXBase/Toast (0.7.0)
   - UICKeyChainStore (2.1.2)
   - WMPageController (2.5.2)
 
@@ -75,7 +77,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
-  MXBase: 674f5b8650ec56bea8407b130d60d26878869abe
+  MXBase: 44c92ac9086c7c7e3f3427cc09f6134b5774f006
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
 
