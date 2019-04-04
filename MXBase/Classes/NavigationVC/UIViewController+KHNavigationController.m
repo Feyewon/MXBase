@@ -9,6 +9,7 @@
 
 #import <objc/runtime.h>
 #import "KHNavigationController.h"
+#import "NSString+Addition.h"
 
 @implementation UIViewController (KHNavigationController)
 @dynamic kh_disableInteractivePop;
@@ -40,7 +41,7 @@
 
 - (UIBarButtonItem *)kh_customBackItemWithTarget:(id)target action:(SEL)action
 {
-    return [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"common_screen_change_icon"]
+    return [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithContentsOfFile:[@"common_screen_change_icon" getModuleImagePathWithBundleClass:[self class]]]
                                             style:UIBarButtonItemStylePlain target:target action:action];
 }
 

@@ -98,8 +98,8 @@ s.subspec 'Parser' do |ps|
 end
 
 s.subspec 'NavigationVC' do |nvc|
-    nvc.dependency 'MXBase/Category'
     nvc.source_files = 'MXBase/Classes/NavigationVC/**/*'
+    nvc.dependency 'MXBase/Category'
 end
 
 s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
