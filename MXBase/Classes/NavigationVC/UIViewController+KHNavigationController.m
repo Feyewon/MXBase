@@ -41,9 +41,10 @@
 
 - (UIBarButtonItem *)kh_customBackItemWithTarget:(id)target action:(SEL)action
 {
-    return [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithContentsOfFile:[@"common_screen_change_icon" getModuleImagePathWithBundleClass:[self class]]]
-                                            style:UIBarButtonItemStylePlain target:target action:action];
+    UIImage *image = [[UIImage imageWithContentsOfFile:[@"common_return_icon_black" getModuleImagePathWithBundleClass:[KHNavigationController class]]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:target action:action];
 }
+
 
 
 
