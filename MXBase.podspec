@@ -99,6 +99,9 @@ end
 
 s.subspec 'NavigationVC' do |nvc|
     nvc.source_files = 'MXBase/Classes/NavigationVC/**/*'
+    nvc.resource_bundles = {
+        'MXBase' => ['MXBase/Assets/NavigationVC/*.png']
+    }
     nvc.dependency 'MXBase/Category'
 end
 
