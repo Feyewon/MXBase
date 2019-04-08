@@ -9,6 +9,7 @@
 #import "MXErrorView.h"
 #import "Masonry.h"
 #import "NSString+Addition.h"
+#import "UIColor+Addition.h"
 
 @interface MXErrorView ()
 
@@ -24,7 +25,7 @@
 
 - (id)init {
     if (self = [super init]) {
-        self.backgroundColor = [UIColor whiteColor]; // #252B56
+        self.backgroundColor = [UIColor getColor:@"f5f6f7"]; // #252B56
         [self buildSubviews];
         [self addMasonryConstrains];
     }
@@ -36,24 +37,24 @@
     self.topBackgroundView.backgroundColor = [UIColor clearColor];
     [self addSubview:self.topBackgroundView];
     
-    UIImage *notifyImage = [UIImage imageWithContentsOfFile:[@"overtimebutton" getModuleImagePathWithBundleClass:[self class] bundleName:@"ErrorLoadingView"]];
+    UIImage *notifyImage = [UIImage imageWithContentsOfFile:[@"nowifi_icon" getModuleImagePathWithBundleClass:[self class] bundleName:@"ErrorLoadingView"]];
     self.iconImageView = [[UIImageView alloc] initWithImage:notifyImage];
     [self.topBackgroundView addSubview:self.iconImageView];
     
     self.titleLabel = [UILabel new];
     self.titleLabel.font = [UIFont systemFontOfSize:15];
-    self.titleLabel.textColor = [UIColor colorWithRed:85 / 255 green:85 / 255 blue:85 / 255 alpha:1];   // #555555
+    self.titleLabel.textColor = [UIColor getColor:@"a1abbc"];   // #555555
     self.titleLabel.text = @"网络请求超时";
     [self.topBackgroundView addSubview:self.titleLabel];
     
     self.contentLabel = [UILabel new];
     self.contentLabel.font = [UIFont systemFontOfSize:14];
-    self.contentLabel.textColor = [UIColor colorWithRed:170 / 255 green:170 / 255 blue:170 / 255 alpha:1]; // #aaaaaa
+    self.contentLabel.textColor = [UIColor getColor:@"a1abbc"]; // #aaaaaa
     self.contentLabel.text = @"稍后请刷新重试";
     [self.topBackgroundView addSubview:self.contentLabel];
     
     self.freshButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *overTimeImage = [UIImage imageWithContentsOfFile:[@"nowifi_icon" getModuleImagePathWithBundleClass:[self class] bundleName:@"ErrorLoadingView"]];
+    UIImage *overTimeImage = [UIImage imageWithContentsOfFile:[@"overtimebutton" getModuleImagePathWithBundleClass:[self class] bundleName:@"ErrorLoadingView"]];
     [self.freshButton setImage:overTimeImage forState:UIControlStateNormal];
     
     [self addSubview:self.freshButton];
