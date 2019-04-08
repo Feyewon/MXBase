@@ -63,9 +63,6 @@ end
 
 s.subspec 'ErrorLoadingView' do |errorLoadView|
     errorLoadView.source_files = 'MXBase/Classes/ErrorLoadingView/**/*'
-    errorLoadView.resource_bundles = {
-        'MXBase' => ['MXBase/Assets/ErrorLoadingView/*.png']
-    }
     errorLoadView.dependency 'Masonry'
     errorLoadView.dependency 'MBProgressHUD'
     errorLoadView.dependency 'MXBase/Category'
