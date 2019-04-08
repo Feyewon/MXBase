@@ -36,7 +36,7 @@
     self.topBackgroundView.backgroundColor = [UIColor clearColor];
     [self addSubview:self.topBackgroundView];
     
-    UIImage *notifyImage = [UIImage imageWithContentsOfFile:[@"overtimebutton" getModuleImagePathWithBundleClass:[self class]]];
+    UIImage *notifyImage = [UIImage imageWithContentsOfFile:[@"overtimebutton" getModuleImagePathWithBundleClass:[self class] bundleName:@"ErrorLoadingView"]];
     self.iconImageView = [[UIImageView alloc] initWithImage:notifyImage];
     [self.topBackgroundView addSubview:self.iconImageView];
     
@@ -53,7 +53,7 @@
     [self.topBackgroundView addSubview:self.contentLabel];
     
     self.freshButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *overTimeImage = [UIImage imageWithContentsOfFile:[@"nowifi_icon" getModuleImagePathWithBundleClass:[self class]]];
+    UIImage *overTimeImage = [UIImage imageWithContentsOfFile:[@"nowifi_icon" getModuleImagePathWithBundleClass:[self class] bundleName:@"ErrorLoadingView"]];
     [self.freshButton setImage:overTimeImage forState:UIControlStateNormal];
     
     [self addSubview:self.freshButton];

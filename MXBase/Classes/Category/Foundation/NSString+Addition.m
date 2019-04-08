@@ -383,5 +383,13 @@
     return [currentBundle pathForResource:imageName ofType:nil inDirectory:[NSString stringWithFormat:@"%@.bundle",currentBundleName]];
 }
 
+- (NSString *)getModuleImagePathWithBundleClass:(Class)bundleClass bundleName:(NSString *)bundleName {
+    
+    NSInteger scale = [UIScreen mainScreen].scale;
+    NSString *imageName = [NSString stringWithFormat:@"%@@%zdx.png",self,scale];
+    NSBundle *currentBundle = [NSBundle bundleForClass:bundleClass];
+    return [currentBundle pathForResource:imageName ofType:nil inDirectory:[NSString stringWithFormat:@"%@.bundle",bundleName]];
+}
+
 
 @end
