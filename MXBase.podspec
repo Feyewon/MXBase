@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
 s.name             = 'MXBase'
-s.version          = '1.5.0'
+s.version          = '1.6.0'
 s.summary          = '基础组件库'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -63,6 +63,9 @@ end
 
 s.subspec 'ErrorLoadingView' do |errorLoadView|
     errorLoadView.source_files = 'MXBase/Classes/ErrorLoadingView/**/*'
+    errorLoadView.resource_bundles = {
+        'ErrorLoadingView' => ['MXBase/Assets/ErrorLoadingView/*.png']
+    }
     errorLoadView.dependency 'Masonry'
     errorLoadView.dependency 'MBProgressHUD'
     errorLoadView.dependency 'MXBase/Category'
@@ -101,7 +104,7 @@ end
 s.subspec 'NavigationVC' do |nvc|
     nvc.source_files = 'MXBase/Classes/NavigationVC/**/*'
     nvc.resource_bundles = {
-        'MXBase' => ['MXBase/Assets/NavigationVC/*.png']
+        'NavigationVC' => ['MXBase/Assets/NavigationVC/*.png']
     }
     nvc.dependency 'MXBase/Category'
 end
