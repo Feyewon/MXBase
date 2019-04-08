@@ -8,6 +8,7 @@
 
 #import "MXErrorView.h"
 #import "Masonry.h"
+#import "NSString+Addition.h"
 
 @interface MXErrorView ()
 
@@ -35,7 +36,8 @@
     self.topBackgroundView.backgroundColor = [UIColor clearColor];
     [self addSubview:self.topBackgroundView];
     
-    self.iconImageView = [[UIImageView alloc] initWithImage:self.notifyImage];
+    UIImage *notifyImage = [UIImage imageWithContentsOfFile:[@"overtimebutton" getModuleImagePathWithBundleClass:[self class]]];
+    self.iconImageView = [[UIImageView alloc] initWithImage:notifyImage];
     [self.topBackgroundView addSubview:self.iconImageView];
     
     self.titleLabel = [UILabel new];
@@ -51,7 +53,9 @@
     [self.topBackgroundView addSubview:self.contentLabel];
     
     self.freshButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.freshButton setImage:self.overTimeImage forState:UIControlStateNormal];
+    UIImage *overTimeImage = [UIImage imageWithContentsOfFile:[@"nowifi_icon" getModuleImagePathWithBundleClass:[self class]]];
+    [self.freshButton setImage:overTimeImage forState:UIControlStateNormal];
+    
     [self addSubview:self.freshButton];
     [self.freshButton addTarget:self action:@selector(freshNetworkAction) forControlEvents:UIControlEventTouchUpInside];
 }
