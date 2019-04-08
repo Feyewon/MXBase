@@ -23,7 +23,7 @@
 
 - (id)init {
     if (self = [super init]) {
-        self.backgroundColor = [UIColor colorWithRed:37 / 255 green:43 / 255 blue:86 / 255 alpha:1]; // #252B56
+        self.backgroundColor = [UIColor whiteColor]; // #252B56
         [self buildSubviews];
         [self addMasonryConstrains];
     }
