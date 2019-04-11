@@ -7,7 +7,7 @@
 //
 
 #import "UINavigationController+Addition.h"
-
+#import "UIImage+Addition.h"
 
 @implementation UINavigationController (Addition)
 - (void)hideNavigationBar {
