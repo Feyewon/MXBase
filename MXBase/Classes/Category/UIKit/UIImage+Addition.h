@@ -43,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIImage *)imageByResizeToSize:(CGSize)size
                      contentMode:(UIViewContentMode)contentMode;
+
++ (UIImage *)imageWithColor:(UIColor *)color;
 @end
 
 NS_ASSUME_NONNULL_END

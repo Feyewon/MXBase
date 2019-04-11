@@ -15,7 +15,7 @@
 }
 
 - (CGSize)intrinsicContentSize {
-    return CGSizeMake(90, 90);
+    return CGSizeMake(80, 80);
 }
 
 - (instancetype)init {
@@ -48,7 +48,7 @@
             shimmeringView.shimmering                  = YES;
             UIView *view                               = [UIView new];
             view.backgroundColor                       = [UIColor clearColor];
-            _icon                                      = [[UIImageView alloc] initWithImage:self.loadingImage];
+            _icon                                      = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LOADING_ICON"]];
             _icon.backgroundColor                      = [UIColor clearColor];
             shimmeringView.contentView                 = view;
             
@@ -57,7 +57,7 @@
             
             [_icon mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.center.equalTo(view);
-                make.size.mas_equalTo(CGSizeMake(76, 44));
+                make.size.mas_equalTo(CGSizeMake(80, 80));
             }];
             
             [shimmeringView mas_makeConstraints:^(MASConstraintMaker *make) {
