@@ -710,6 +710,10 @@ __attribute((overloadable)) static inline UIViewController *KHSafeWrapViewContro
         return;
     }
     
+    if (self.childViewControllers.count == 1) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    
     if (self.viewControllers.count > 0) {
         UIViewController *currentLast = KHSafeUnwrapViewController(self.viewControllers.lastObject);
         [super pushViewController:KHSafeWrapViewController(viewController,
