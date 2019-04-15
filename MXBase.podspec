@@ -112,6 +112,7 @@ end
 s.subspec 'PhotoLibrary' do |pl|
     pl.source_files = 'MXBase/Classes/PhotoLibrary/**/*'
     pl.dependency 'MXBase/Category'
+    pl.dependency 'MXBase/Base'
 end
 
 s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
