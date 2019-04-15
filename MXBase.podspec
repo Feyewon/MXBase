@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
 s.name             = 'MXBase'
-s.version          = '2.1.0'
+s.version          = '2.3.0'
 s.summary          = '基础组件库'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -107,6 +107,11 @@ s.subspec 'NavigationVC' do |nvc|
         'NavigationVC' => ['MXBase/Assets/NavigationVC/*.png']
     }
     nvc.dependency 'MXBase/Category'
+end
+
+s.subspec 'PhotoLibrary' do |pl|
+    pl.source_files = 'MXBase/Classes/PhotoLibrary/**/*'
+    pl.dependency 'MXBase/Category'
 end
 
 s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
