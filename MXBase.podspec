@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
 s.name             = 'MXBase'
-s.version          = '2.3.0'
+s.version          = '2.5.0'
 s.summary          = '基础组件库'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -43,6 +43,9 @@ end
 
 s.subspec 'Alert' do |alert|
     alert.source_files = 'MXBase/Classes/Alert/**/*'
+    alert.dependency 'MXBase/Base'
+    alert.dependency 'MXBase/Category'
+    alert.dependency 'SDCAlertView' , '~> 2.5.4'
 end
 
 s.subspec 'System' do |sy|
