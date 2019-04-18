@@ -5,59 +5,61 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.16)
   - MJRefresh (3.1.16)
-  - MXBase (2.4.0):
-    - MXBase/Alert (= 2.4.0)
-    - MXBase/AttributeStringTool (= 2.4.0)
-    - MXBase/Base (= 2.4.0)
-    - MXBase/BeeHive (= 2.4.0)
-    - MXBase/BlockTool (= 2.4.0)
-    - MXBase/Category (= 2.4.0)
-    - MXBase/CustomView (= 2.4.0)
-    - MXBase/EmptyView (= 2.4.0)
-    - MXBase/ErrorLoadingView (= 2.4.0)
-    - MXBase/Helpers (= 2.4.0)
-    - MXBase/KvoController (= 2.4.0)
-    - MXBase/MenuPage (= 2.4.0)
-    - MXBase/NavigationVC (= 2.4.0)
-    - MXBase/Parser (= 2.4.0)
-    - MXBase/PhotoLibrary (= 2.4.0)
-    - MXBase/Refresh (= 2.4.0)
-    - MXBase/System (= 2.4.0)
-    - MXBase/Toast (= 2.4.0)
-  - MXBase/Alert (2.4.0):
+  - MXBase (2.8.0):
+    - MXBase/Alert (= 2.8.0)
+    - MXBase/AttributeStringTool (= 2.8.0)
+    - MXBase/Base (= 2.8.0)
+    - MXBase/BeeHive (= 2.8.0)
+    - MXBase/BlockTool (= 2.8.0)
+    - MXBase/Category (= 2.8.0)
+    - MXBase/CustomView (= 2.8.0)
+    - MXBase/EmptyView (= 2.8.0)
+    - MXBase/ErrorLoadingView (= 2.8.0)
+    - MXBase/Helpers (= 2.8.0)
+    - MXBase/KvoController (= 2.8.0)
+    - MXBase/MenuPage (= 2.8.0)
+    - MXBase/NavigationVC (= 2.8.0)
+    - MXBase/Parser (= 2.8.0)
+    - MXBase/PhotoLibrary (= 2.8.0)
+    - MXBase/Refresh (= 2.8.0)
+    - MXBase/System (= 2.8.0)
+    - MXBase/Toast (= 2.8.0)
+  - MXBase/Alert (2.8.0):
+    - Masonry
+    - MXBase/AttributeStringTool
     - MXBase/Base
     - MXBase/Category
     - SDCAlertView (~> 2.5.4)
-  - MXBase/AttributeStringTool (2.4.0)
-  - MXBase/Base (2.4.0):
+  - MXBase/AttributeStringTool (2.8.0)
+  - MXBase/Base (2.8.0):
     - UICKeyChainStore
-  - MXBase/BeeHive (2.4.0):
+  - MXBase/BeeHive (2.8.0):
     - BeeHive
-  - MXBase/BlockTool (2.4.0)
-  - MXBase/Category (2.4.0)
-  - MXBase/CustomView (2.4.0)
-  - MXBase/EmptyView (2.4.0)
-  - MXBase/ErrorLoadingView (2.4.0):
+  - MXBase/BlockTool (2.8.0)
+  - MXBase/Category (2.8.0)
+  - MXBase/CustomView (2.8.0)
+  - MXBase/EmptyView (2.8.0)
+  - MXBase/ErrorLoadingView (2.8.0):
     - Masonry
     - MBProgressHUD
     - MXBase/Category
-  - MXBase/Helpers (2.4.0)
-  - MXBase/KvoController (2.4.0)
-  - MXBase/MenuPage (2.4.0):
+  - MXBase/Helpers (2.8.0)
+  - MXBase/KvoController (2.8.0)
+  - MXBase/MenuPage (2.8.0):
     - WMPageController
-  - MXBase/NavigationVC (2.4.0):
+  - MXBase/NavigationVC (2.8.0):
     - MXBase/Category
-  - MXBase/Parser (2.4.0):
+  - MXBase/Parser (2.8.0):
     - MJExtension
-  - MXBase/PhotoLibrary (2.4.0):
+  - MXBase/PhotoLibrary (2.8.0):
     - MXBase/Base
     - MXBase/Category
-  - MXBase/Refresh (2.4.0):
+  - MXBase/Refresh (2.8.0):
     - MJRefresh
-  - MXBase/System (2.4.0):
+  - MXBase/System (2.8.0):
     - AFNetworking/Reachability
     - MXBase/Base
-  - MXBase/Toast (2.4.0)
+  - MXBase/Toast (2.8.0)
   - RBBAnimation (0.4.0)
   - SDCAlertView (2.5.4):
     - RBBAnimation (~> 0.3)
@@ -94,7 +96,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
-  MXBase: ee14b4f3a8204f1a46ee82410022a56406111ca4
+  MXBase: 76a68db6147beb6b17c12eb62c4e2a5c9d959ddb
   RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
   SDCAlertView: 2e2b0ecc5f1ec367e45d83efa2e512688ca7fa55
   SDCAutoLayout: e6885bb39ab8e2ec2ff84d158f38035f025f7420
