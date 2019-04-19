@@ -9,6 +9,7 @@
 #import "UIScrollView+MCRefreshWithTask.h"
 #import "MJRefresh.h"
 #import "NSObject+YYAdd.h"
+
 @implementation UIScrollView (MCRefreshWithTask)
 static NSString *propertyKey = @"propertyKey";
 - (void)setTaskDelegate:(id<MCRefreshTaskDelegate>)taskDelegate {
@@ -33,6 +34,8 @@ static NSString *propertyKey = @"propertyKey";
 
 - (void)addLoadMoreComponent {
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    footer.stateLabel.font = [UIFont systemFontOfSize:13];
+    footer.stateLabel.textColor = [[UIColor alloc]initWithRed:161 green:171 blue:188 alpha:1.f];
     self.mj_footer = footer;
 }
 
