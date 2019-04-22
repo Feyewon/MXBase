@@ -316,8 +316,8 @@
     return (NSUInteger)ull;
 }
 
-+ (NSString *)timeToString:(NSInteger)time {
-    long nowTime = [[NSDate date] timeIntervalSince1970];
++ (NSString *)timeToString:(long long)time {
+    long long nowTime = [[NSDate date] timeIntervalSince1970];
     long before = nowTime - time;
     if (before <= 0) {
         return @"现在";

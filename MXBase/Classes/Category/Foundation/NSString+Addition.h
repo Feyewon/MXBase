@@ -64,7 +64,7 @@
 - (NSUInteger)unsignIntegerValue;
 +(NSDictionary *)createTextAttributeWithFontSize:(NSUInteger)size fontColor:(NSString *)color;
 + (BOOL)isEmailAccount:(NSString *)string;
-+ (NSString *)timeToString:(NSInteger)time;
++ (NSString *)timeToString:(long long)time;
 - (NSString *)timeToStringV2Withformat:(NSString *)format;
 - (NSString *)formatTimeStampWithFormat:(NSString *)format;
 
