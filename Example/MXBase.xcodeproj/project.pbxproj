@@ -255,6 +255,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Feyewon;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = PZHQ8ZR87A;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -516,6 +519,7 @@
 			baseConfigurationReference = 415DE84691146157DB335A1D /* Pods-MXBase_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PZHQ8ZR87A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MXBase/MXBase-Prefix.pch";
 				INFOPLIST_FILE = "MXBase/MXBase-Info.plist";
@@ -531,6 +535,7 @@
 			baseConfigurationReference = 4CA82327EA940E7C38389822 /* Pods-MXBase_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PZHQ8ZR87A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MXBase/MXBase-Prefix.pch";
 				INFOPLIST_FILE = "MXBase/MXBase-Info.plist";
