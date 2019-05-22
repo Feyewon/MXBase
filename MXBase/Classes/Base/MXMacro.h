@@ -71,3 +71,8 @@ dispatch_semaphore_signal(view->_lock);
 #define CreateAttributedBoldString(dcObj,dcFontSize,dcColor,dcText) NSAttributedString *dcObj = [[NSAttributedString alloc] initWithString:dcText attributes:@{NSForegroundColorAttributeName:[UIColor getColor:dcColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:dcFontSize]}];
 #endif
 
+#ifdef DEBUG
+#define KHLog(format, ...) NSLog(format, ## __VA_ARGS__)
+#else
+#define KHLog(format, ...)
+#endif
