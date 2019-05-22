@@ -7,7 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
+///点击lable上某个文字响应事件view
+
 @protocol YBAttributeTapActionDelegate <NSObject>
+
 @optional
 /**
  *  YBAttributeTapActionDelegate

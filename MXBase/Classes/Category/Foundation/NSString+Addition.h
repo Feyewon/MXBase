@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Addition)
+
 - (BOOL)isPureInt;
--(BOOL)isPureDouble;
+- (BOOL)isPureDouble;
 
 
 /*
@@ -18,8 +19,8 @@
  *  10->10m
  *  10000->10.00km
  */
-+(NSString *)formatDistance:(double)distance;
-+(NSString *)formatDistanceCHN:(double)distance;
++ (NSString *)formatDistance:(double)distance;
++ (NSString *)formatDistanceCHN:(double)distance;
 
 /*
  *  格式化时间
@@ -28,16 +29,19 @@
  *  5400 -> 1.5小时
  *
  */
-+(NSString *)formatDuration:(double)duration;
++ (NSString *)formatDuration:(double)duration;
 
+///****时间戳转换自己需要的时间格式****
++ (NSString *)formatWithTimeStamp:(NSString *)timeStamp;
 
 /*
  *  格式化数量
  *  10->10
- *  10000->10k
+ *  1000->1k
+ *  10000->1w
  *
  */
-+(NSString *)formatNumber:(NSInteger)number;
++ (NSString *)formatNumber:(NSInteger)number;
 
 
 /*
@@ -45,24 +49,24 @@
  *  yyyy MM dd HH mm
  *
  */
--(NSDate *)stringToTimeWithFormat:(NSString *)format;
+- (NSDate *)stringToTimeWithFormat:(NSString *)format;
 
--(NSString *)md5String;
--(NSString *)URLEncode;
--(NSString *)URLDecode;
+- (NSString *)md5String;
+- (NSString *)URLEncode;
+- (NSString *)URLDecode;
 
--(CGFloat)calcHeightWithWidth:(CGFloat)width andFont:(UIFont *)font;
--(CGFloat)calcHeightWithWidth:(CGFloat)width andFont:(UIFont *)font andNumberOfLines:(NSInteger)number;
-+(NSString *)formatIntegerNumberWith:(NSInteger)number;
+- (CGFloat)calcHeightWithWidth:(CGFloat)width andFont:(UIFont *)font;
+- (CGFloat)calcHeightWithWidth:(CGFloat)width andFont:(UIFont *)font andNumberOfLines:(NSInteger)number;
++ (NSString *)formatIntegerNumberWith:(NSInteger)number;
 - (NSString *)getURLDomain;
 - (NSMutableDictionary *)getURLParameters;
 - (BOOL)dc_containsString:(NSString *)aString;
-+(BOOL)isPinyin:(NSString *)string;
-+(NSString *)hidenMidStringWith:(NSString *)string;
-+(BOOL)is11BitPhone:(NSString *)string;
-+(BOOL)is6BitCode:(NSString *)string;
++ (BOOL)isPinyin:(NSString *)string;
++ (NSString *)hidenMidStringWith:(NSString *)string;
++ (BOOL)is11BitPhone:(NSString *)string;
++ (BOOL)is6BitCode:(NSString *)string;
 - (NSUInteger)unsignIntegerValue;
-+(NSDictionary *)createTextAttributeWithFontSize:(NSUInteger)size fontColor:(NSString *)color;
++ (NSDictionary *)createTextAttributeWithFontSize:(NSUInteger)size fontColor:(NSString *)color;
 + (BOOL)isEmailAccount:(NSString *)string;
 + (NSString *)timeToString:(long long)time;
 - (NSString *)timeToStringV2Withformat:(NSString *)format;
@@ -70,4 +74,5 @@
 
 - (NSString *)getModuleImagePathWithBundleClass:(Class)bundleClass;
 - (NSString *)getModuleImagePathWithBundleClass:(Class)bundleClass bundleName:(NSString *)bundleName;
+
 @end

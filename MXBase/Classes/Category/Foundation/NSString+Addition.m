@@ -55,7 +55,7 @@
     }else if(number<10000){
         return [NSString stringWithFormat:@"%.1fk",number/1000.0];
     }else{
-        return [NSString stringWithFormat:@"%.0fk",number/1000.0];
+        return [NSString stringWithFormat:@"%.1fw",number/10000.0];
     }
 }
 
@@ -389,6 +389,72 @@
     NSString *imageName = [NSString stringWithFormat:@"%@@%zdx.png",self,scale];
     NSBundle *currentBundle = [NSBundle bundleForClass:bundleClass];
     return [currentBundle pathForResource:imageName ofType:nil inDirectory:[NSString stringWithFormat:@"%@.bundle",bundleName]];
+}
+
+
++ (NSString *)formatWithTimeStamp:(NSString *)timeStamp {
+    return [self formatWithTimeStamp:timeStamp formatter:@"YYYY-MM-dd HH:mm:ss"];
+}
+
++ (NSString *)formatWithTimeStamp:(NSString *)timeStamp formatter:(NSString *)formatter {
+    NSString *dateStr;
+    
+    NSDate *convertDate = [NSDate dateWithTimeIntervalSince1970:[timeStamp doubleValue]];
+    long long nowTime = [[NSDate date] timeIntervalSince1970];
+    long timeDelt = nowTime - [timeStamp doubleValue];
+    
+    if ([self isSameYearWithTimeStamp:timeStamp]) { //同一年
+        if (timeDelt <= 0) {
+            return @"刚刚";
+        } else if (timeDelt < 60 && timeDelt > 0) {
+            return [NSString stringWithFormat:@"%ld秒之前", timeDelt];
+        } else if (timeDelt < 60 * 60 && timeDelt >= 60) {
+            return [NSString stringWithFormat:@"%ld分钟之前", timeDelt / 60];
+        } else if (timeDelt < 60 * 60 * 24 && timeDelt >= 60 * 60) {
+            return [NSString stringWithFormat:@"%ld小时之前", timeDelt / 3600];
+        } else {
+            NSArray *timeArray = [self fetchTimeYearAndMonthAndDayInDate:convertDate];
+            dateStr = [NSString stringWithFormat:@"%@-%@", timeArray[1], timeArray[2]];
+            return dateStr;
+        }
+    } else {
+        NSArray *timeArray = [self fetchTimeYearAndMonthAndDayInDate:convertDate];
+        dateStr = [NSString stringWithFormat:@"%@-%@-%@", timeArray[0], timeArray[1], timeArray[2]];
+        return dateStr;
+    }
+}
+
+///和当前年是否是同一年
++ (BOOL)isSameYearWithTimeStamp:(NSString *)timeStamp {
+    
+    //传入时间戳年份
+    NSDate *toConvertDate = [NSDate dateWithTimeIntervalSince1970:[timeStamp doubleValue]];
+    NSInteger timeYear = [self fetchTimeYear:toConvertDate];
+    
+    //当前年
+    NSDate *currentDate = [NSDate date];
+    NSInteger currentYear = [self fetchTimeYear:currentDate];
+    
+    return (timeYear == currentYear) ? YES : NO;
+}
+
+///获取年份
++ (NSInteger)fetchTimeYear:(NSDate *)date {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:date];
+    NSInteger year = components.year;
+    return year;
+}
+
+///获取年月日
++ (NSArray *)fetchTimeYearAndMonthAndDayInDate:(NSDate *)date {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:date];
+    NSInteger year = components.year;
+    NSInteger month = components.month;
+    NSInteger day  = components.day;
+    NSArray *array = [NSArray arrayWithObjects:@(year), @(month), @(day), nil];
+    return array;
 }
 
 
