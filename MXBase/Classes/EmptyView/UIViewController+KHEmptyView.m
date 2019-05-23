@@ -112,6 +112,7 @@ static NSString *noDataViewKey = @"noDataViewKey";
 
 - (KHEmptyView *)createEmptyView {
     KHEmptyView *view = [[KHEmptyView alloc] init];
+    view.userInteractionEnabled = NO;
     return view;
 }
 
