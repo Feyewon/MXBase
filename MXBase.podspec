@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
 s.name             = 'MXBase'
-s.version          = '3.1.9'
+s.version          = '3.2.0'
 s.summary          = '基础组件库'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -78,6 +78,8 @@ end
 
 s.subspec 'EmptyView' do |emptyView|
     emptyView.source_files = 'MXBase/Classes/EmptyView/**/*'
+    emptyView.dependency 'Masonry'
+    emptyView.dependency 'MXBase/Category'
 end
 
 s.subspec 'Toast' do |toast|

@@ -5,66 +5,66 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.17)
   - MJRefresh (3.2.0)
-  - MXBase (3.1.8):
-    - MXBase/Alert (= 3.1.8)
-    - MXBase/AttributeStringTool (= 3.1.8)
-    - MXBase/Base (= 3.1.8)
-    - MXBase/BeeHive (= 3.1.8)
-    - MXBase/BlockTool (= 3.1.8)
-    - MXBase/Category (= 3.1.8)
-    - MXBase/CustomView (= 3.1.8)
-    - MXBase/EmptyView (= 3.1.8)
-    - MXBase/ErrorLoadingView (= 3.1.8)
-    - MXBase/Helpers (= 3.1.8)
-    - MXBase/KvoController (= 3.1.8)
-    - MXBase/MenuPage (= 3.1.8)
-    - MXBase/NavigationVC (= 3.1.8)
-    - MXBase/Parser (= 3.1.8)
-    - MXBase/PhotoLibrary (= 3.1.8)
-    - MXBase/Pickers (= 3.1.8)
-    - MXBase/Refresh (= 3.1.8)
-    - MXBase/SelectAddress (= 3.1.8)
-    - MXBase/System (= 3.1.8)
-    - MXBase/Toast (= 3.1.8)
-  - MXBase/Alert (3.1.8):
+  - MXBase (3.1.9):
+    - MXBase/Alert (= 3.1.9)
+    - MXBase/AttributeStringTool (= 3.1.9)
+    - MXBase/Base (= 3.1.9)
+    - MXBase/BeeHive (= 3.1.9)
+    - MXBase/BlockTool (= 3.1.9)
+    - MXBase/Category (= 3.1.9)
+    - MXBase/CustomView (= 3.1.9)
+    - MXBase/EmptyView (= 3.1.9)
+    - MXBase/ErrorLoadingView (= 3.1.9)
+    - MXBase/Helpers (= 3.1.9)
+    - MXBase/KvoController (= 3.1.9)
+    - MXBase/MenuPage (= 3.1.9)
+    - MXBase/NavigationVC (= 3.1.9)
+    - MXBase/Parser (= 3.1.9)
+    - MXBase/PhotoLibrary (= 3.1.9)
+    - MXBase/Pickers (= 3.1.9)
+    - MXBase/Refresh (= 3.1.9)
+    - MXBase/SelectAddress (= 3.1.9)
+    - MXBase/System (= 3.1.9)
+    - MXBase/Toast (= 3.1.9)
+  - MXBase/Alert (3.1.9):
     - Masonry
     - MXBase/AttributeStringTool
     - MXBase/Base
     - MXBase/Category
     - SDCAlertView (~> 2.5.4)
-  - MXBase/AttributeStringTool (3.1.8)
-  - MXBase/Base (3.1.8):
+  - MXBase/AttributeStringTool (3.1.9)
+  - MXBase/Base (3.1.9):
     - UICKeyChainStore
-  - MXBase/BeeHive (3.1.8):
+  - MXBase/BeeHive (3.1.9):
     - BeeHive
-  - MXBase/BlockTool (3.1.8)
-  - MXBase/Category (3.1.8)
-  - MXBase/CustomView (3.1.8)
-  - MXBase/EmptyView (3.1.8)
-  - MXBase/ErrorLoadingView (3.1.8):
+  - MXBase/BlockTool (3.1.9)
+  - MXBase/Category (3.1.9)
+  - MXBase/CustomView (3.1.9)
+  - MXBase/EmptyView (3.1.9)
+  - MXBase/ErrorLoadingView (3.1.9):
     - Masonry
     - MBProgressHUD
     - MXBase/Category
-  - MXBase/Helpers (3.1.8)
-  - MXBase/KvoController (3.1.8)
-  - MXBase/MenuPage (3.1.8):
+  - MXBase/Helpers (3.1.9)
+  - MXBase/KvoController (3.1.9)
+  - MXBase/MenuPage (3.1.9):
     - WMPageController
-  - MXBase/NavigationVC (3.1.8):
+  - MXBase/NavigationVC (3.1.9):
     - MXBase/Category
-  - MXBase/Parser (3.1.8):
+  - MXBase/Parser (3.1.9):
     - MJExtension
-  - MXBase/PhotoLibrary (3.1.8):
+  - MXBase/PhotoLibrary (3.1.9):
     - MXBase/Base
     - MXBase/Category
-  - MXBase/Pickers (3.1.8)
-  - MXBase/Refresh (3.1.8):
+  - MXBase/Pickers (3.1.9)
+  - MXBase/Refresh (3.1.9):
     - MJRefresh
     - MXBase/Category
-  - MXBase/SelectAddress (3.1.8)
-  - MXBase/System (3.1.8):
+  - MXBase/SelectAddress (3.1.9)
+  - MXBase/System (3.1.9):
     - AFNetworking/Reachability
     - MXBase/Base
-  - MXBase/Toast (3.1.8)
+  - MXBase/Toast (3.1.9)
   - RBBAnimation (0.4.0)
   - SDCAlertView (2.5.4):
     - RBBAnimation (~> 0.3)
@@ -101,7 +101,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
-  MXBase: a4655a6f5cc105c3422d96c672278de5fb3788b2
+  MXBase: 38031a9b8f496a8e7b3f325c8aa5afc31c37198f
   RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
   SDCAlertView: 2e2b0ecc5f1ec367e45d83efa2e512688ca7fa55
   SDCAutoLayout: e6885bb39ab8e2ec2ff84d158f38035f025f7420
