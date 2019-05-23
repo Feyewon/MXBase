@@ -20,7 +20,7 @@
 -(id)init{
     if(self=[super init]){
         self.submitButtonTitle=@"确认";
-        self.submitButtonColor=[UIColor getColor:@"ffd220"];
+        self.submitButtonColor=[UIColor getColor:@"333333"];
         [self buildSubview];
         [self makeMansonryConstrains];
     }
@@ -33,9 +33,9 @@
 
 -(void)buildSubview{
     self.titleLabel=[UILabel new];
-    self.titleLabel.font=[UIFont systemFontOfSize:14];
+    self.titleLabel.font=[UIFont systemFontOfSize:16];
     self.titleLabel.textAlignment=NSTextAlignmentCenter;
-    self.titleLabel.textColor=[UIColor getColor:@"565e6a"];
+    self.titleLabel.textColor=[UIColor getColor:@"000000"];
     [self addSubview:self.titleLabel];
     
     self.contentLabel=[UILabel new];
@@ -93,11 +93,11 @@
     if(self.cancelButton){
         [self.cancelButton mas_updateConstraints:^(MASConstraintMaker *make) {
             make.bottom.left.equalTo(weakSelf);
-            make.height.mas_equalTo(45);
+            make.height.mas_equalTo(49);
             make.width.equalTo(weakSelf.mas_width).multipliedBy(0.5);
         }];
     }
-
+    
 }
 
 -(void)setTitle:(NSString *)title{
@@ -127,6 +127,7 @@
     if(self.submitButton){
         [self.submitButton setTitle:self.submitButtonTitle forState:UIControlStateNormal];
         [self.submitButton setTitleColor:self.submitButtonColor forState:UIControlStateNormal];
+        self.submitButton.backgroundColor = [UIColor getColor:@"f9fafc"];
         self.submitButton.titleLabel.font=[UIFont systemFontOfSize:14];
     }
 }
@@ -230,11 +231,11 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end
