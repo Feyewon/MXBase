@@ -403,39 +403,37 @@
     long long nowTime = [[NSDate date] timeIntervalSince1970];
     long timeDelt = nowTime - [timeStamp doubleValue];
     
-    if ([self isSameYearWithTimeStamp:timeStamp]) { //同一年
-        if (timeDelt <= 0) {
-            return @"刚刚";
-        } else if (timeDelt < 60 && timeDelt > 0) {
-            return [NSString stringWithFormat:@"%ld秒之前", timeDelt];
-        } else if (timeDelt < 60 * 60 && timeDelt >= 60) {
-            return [NSString stringWithFormat:@"%ld分钟之前", timeDelt / 60];
-        } else if (timeDelt < 60 * 60 * 24 && timeDelt >= 60 * 60) {
-            return [NSString stringWithFormat:@"%ld小时之前", timeDelt / 3600];
-        } else {
-            NSArray *timeArray = [self fetchTimeYearAndMonthAndDayInDate:convertDate];
-            dateStr = [NSString stringWithFormat:@"%@-%@", timeArray[1], timeArray[2]];
-            return dateStr;
-        }
+    
+    BOOL isToday = [self isEqualToTodayWithTimeStamp:timeStamp]; //是否是今天
+    BOOL isThisYear = [self isSameYearWithTimeStamp:timeStamp];  //是否是今年
+    NSDateComponents *dateComponents = [self fetchDateInfoWithTimeStamp:timeStamp];
+
+    if (isToday) {
+        return [NSString stringWithFormat:@"%@:%@", dateComponents.hour, dateComponents.minute];
+    } else if (isThisYear) {
+        return [NSString stringWithFormat:@"%@-%@, %@:%@", dateComponents.year, dateComponents.month, dateComponents.hour, dateComponents.minute];
     } else {
-        NSArray *timeArray = [self fetchTimeYearAndMonthAndDayInDate:convertDate];
-        dateStr = [NSString stringWithFormat:@"%@-%@-%@", timeArray[0], timeArray[1], timeArray[2]];
-        return dateStr;
+        return [NSString stringWithFormat:@"%@-%@-%@, %@:%@", dateComponents.year, dateComponents.month, dateComponents.day, dateComponents.hour, dateComponents.minute];
     }
 }
 
-///和当前年是否是同一年
+///是否是同一年
 + (BOOL)isSameYearWithTimeStamp:(NSString *)timeStamp {
     
-    //传入时间戳年份
     NSDate *toConvertDate = [NSDate dateWithTimeIntervalSince1970:[timeStamp doubleValue]];
     NSInteger timeYear = [self fetchTimeYear:toConvertDate];
     
-    //当前年
     NSDate *currentDate = [NSDate date];
     NSInteger currentYear = [self fetchTimeYear:currentDate];
     
     return (timeYear == currentYear) ? YES : NO;
+}
+
+///是否是当天
++ (BOOL)isEqualToTodayWithTimeStamp:(NSString *)timeStamp {
+    NSDate *toConvertDate = [NSDate dateWithTimeIntervalSince1970:[timeStamp doubleValue]];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    return [calendar isDateInToday:toConvertDate];
 }
 
 ///获取年份
@@ -446,15 +444,12 @@
     return year;
 }
 
-///获取年月日
-+ (NSArray *)fetchTimeYearAndMonthAndDayInDate:(NSDate *)date {
+///获取年、月、日、时、分、秒信息
++ (NSDateComponents *)fetchDateInfoWithTimeStamp:(NSString *)timeStamp {
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[timeStamp doubleValue]];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:date];
-    NSInteger year = components.year;
-    NSInteger month = components.month;
-    NSInteger day  = components.day;
-    NSArray *array = [NSArray arrayWithObjects:@(year), @(month), @(day), nil];
-    return array;
+    NSDateComponents *dateComponents = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond fromDate:date];
+    return dateComponents;
 }
 
 
