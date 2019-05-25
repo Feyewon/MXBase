@@ -397,23 +397,17 @@
 }
 
 + (NSString *)formatWithTimeStamp:(NSString *)timeStamp formatter:(NSString *)formatter {
-    NSString *dateStr;
-    
-    NSDate *convertDate = [NSDate dateWithTimeIntervalSince1970:[timeStamp doubleValue]];
-    long long nowTime = [[NSDate date] timeIntervalSince1970];
-    long timeDelt = nowTime - [timeStamp doubleValue];
-    
     
     BOOL isToday = [self isEqualToTodayWithTimeStamp:timeStamp]; //是否是今天
     BOOL isThisYear = [self isSameYearWithTimeStamp:timeStamp];  //是否是今年
     NSDateComponents *dateComponents = [self fetchDateInfoWithTimeStamp:timeStamp];
 
     if (isToday) {
-        return [NSString stringWithFormat:@"%@:%@", dateComponents.hour, dateComponents.minute];
+        return [NSString stringWithFormat:@"%ld:%ld", (long)dateComponents.hour, (long)dateComponents.minute];
     } else if (isThisYear) {
-        return [NSString stringWithFormat:@"%@-%@, %@:%@", dateComponents.year, dateComponents.month, dateComponents.hour, dateComponents.minute];
+        return [NSString stringWithFormat:@"%ld-%ld, %ld:%ld", (long)dateComponents.year, (long)dateComponents.month, (long)dateComponents.hour, (long)dateComponents.minute];
     } else {
-        return [NSString stringWithFormat:@"%@-%@-%@, %@:%@", dateComponents.year, dateComponents.month, dateComponents.day, dateComponents.hour, dateComponents.minute];
+        return [NSString stringWithFormat:@"%ld-%ld-%ld, %ld:%ld", (long)dateComponents.year, (long)dateComponents.month, (long)dateComponents.day, (long)dateComponents.hour, (long)dateComponents.minute];
     }
 }
 
