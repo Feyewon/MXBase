@@ -43,8 +43,8 @@
     
     self.tipLab = ({
         UILabel *lab = [[UILabel alloc] init];
-        lab.font = [UIFont boldSystemFontOfSize:14.f];
-        lab.textColor = [UIColor getColor:@"333333"];
+        lab.font = [UIFont systemFontOfSize:14.f];
+        lab.textColor = [UIColor getColor:@"A1ABBC"];
         lab.textAlignment = NSTextAlignmentCenter;
         lab;
     });
