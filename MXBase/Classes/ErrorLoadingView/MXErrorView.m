@@ -56,6 +56,7 @@
     self.freshButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.freshButton setTitle:@"刷新" forState:UIControlStateNormal];
     [self.freshButton setBackgroundColor:[UIColor getColor:@"218FFF"]];
+    self.freshButton.titleLabel.font = [UIFont systemFontOfSize:15];
     self.freshButton.layer.masksToBounds = YES;
     self.freshButton.layer.cornerRadius = 20;
     [self.freshButton addTarget:self action:@selector(freshNetworkAction) forControlEvents:UIControlEventTouchUpInside];
