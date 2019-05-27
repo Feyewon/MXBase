@@ -37,7 +37,7 @@
     self.topBackgroundView.backgroundColor = [UIColor clearColor];
     [self addSubview:self.topBackgroundView];
     
-    UIImage *notifyImage = [UIImage imageWithContentsOfFile:[@"nowifi_icon" getModuleImagePathWithBundleClass:[self class] bundleName:@"ErrorLoadingView"]];
+    UIImage *notifyImage = [UIImage imageNamed:@"request_noNet"];
     self.iconImageView = [[UIImageView alloc] initWithImage:notifyImage];
     [self.topBackgroundView addSubview:self.iconImageView];
     
@@ -54,23 +54,25 @@
     [self.topBackgroundView addSubview:self.contentLabel];
     
     self.freshButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *overTimeImage = [UIImage imageWithContentsOfFile:[@"overtimebutton" getModuleImagePathWithBundleClass:[self class] bundleName:@"ErrorLoadingView"]];
-    [self.freshButton setImage:overTimeImage forState:UIControlStateNormal];
-    
-    [self addSubview:self.freshButton];
+    [self.freshButton setTitle:@"刷新" forState:UIControlStateNormal];
+    [self.freshButton setBackgroundColor:[UIColor getColor:@"218FFF"]];
+    self.freshButton.layer.masksToBounds = YES;
+    self.freshButton.layer.cornerRadius = 20;
     [self.freshButton addTarget:self action:@selector(freshNetworkAction) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:self.freshButton];
 }
 
 - (void)addMasonryConstrains {
     __weak __typeof(self)weakSelf=self;
     [self.topBackgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(weakSelf.mas_centerX);
-        make.centerY.equalTo(weakSelf.mas_centerY).with.offset(-70);
+        make.centerY.equalTo(weakSelf.mas_centerY).with.offset(-60);
         make.width.equalTo(weakSelf.mas_width);
     }];
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.topBackgroundView);
+        make.size.mas_equalTo((CGSize){200,200});
         make.centerX.equalTo(weakSelf.topBackgroundView.mas_centerX);
     }];
     
@@ -88,6 +90,7 @@
         make.top.equalTo(weakSelf.contentLabel.mas_bottom).with.offset(20);
         make.centerX.equalTo(weakSelf.topBackgroundView.mas_centerX);
         make.bottom.equalTo(weakSelf.topBackgroundView);
+        make.size.mas_equalTo((CGSize){110,40});
     }];
 }
 
@@ -117,3 +120,4 @@
 }
 
 @end
+
