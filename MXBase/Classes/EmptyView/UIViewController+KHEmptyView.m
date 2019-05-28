@@ -65,7 +65,7 @@
     
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.mas_equalTo(self);
-        make.size.mas_equalTo(CGSizeMake(150, 150));
+        make.size.mas_equalTo(CGSizeMake(200, 200));
     }];
     
     [self.tipLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -123,7 +123,7 @@ static NSString *noDataViewKey = @"noDataViewKey";
     
     [superView addSubview:self.noDataView];
     [self.noDataView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view);
+        make.edges.mas_equalTo(superView);
     }];
     self.noDataView.hidden = NO;
     self.noDataView.tipLab.text = tipTitle;

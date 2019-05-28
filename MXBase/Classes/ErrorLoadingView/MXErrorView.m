@@ -67,7 +67,7 @@
     __weak __typeof(self)weakSelf=self;
     [self.topBackgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(weakSelf.mas_centerX);
-        make.centerY.equalTo(weakSelf.mas_centerY).with.offset(-60);
+        make.centerY.equalTo(weakSelf.mas_centerY);
         make.width.equalTo(weakSelf.mas_width);
     }];
     
