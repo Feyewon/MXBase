@@ -7,13 +7,14 @@
 //
 
 #import "UIView+SWRefresh.h"
-#import "MXMacro.h"
 #import <objc/runtime.h>
 
 #define iphoneHeight ([UIScreen mainScreen].bounds.size.height)
-#define iphoneX      ( iphoneHeight == 812 )
+#define iphoneWidth ([UIScreen mainScreen].bounds.size.width)
+#define iPhoneXx (((iphoneWidth == 375.f && iphoneHeight == 812.f) || (iphoneWidth == 414.f && iphoneHeight == 896.f)) ? YES : NO)
 #define ICONSIZE    22      //下拉刷新icon 的大小
-#define MARGINTOP   (NavHeight - 14)     //刷新icon区间
+#define NavHeightX  (iPhoneXx ? 88.f : 64.f)
+#define MARGINTOP   (NavHeightX - 14)     //刷新icon区间
 #define CircleTime  0.5     //旋转一圈所用时间
 #define IconBackTime 0.2    //icon刷新完返回最顶端的时间
 #define WEAKOBJECT(weakObject,object) __weak typeof(object) (weakObject) = object
