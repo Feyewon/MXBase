@@ -134,7 +134,6 @@ static char Refresh_Key, ScrollView_Key, Block_Key, MarginTop_Key, Animation_Key
         });
 //        return;
     }
-    NSLog(@"self.extenScrollView.contentInset.top ==== %f",self.extenScrollView.contentInset.top);
     // 实时监测scrollView.contentInset.top， 系统优化以及手动设置contentInset都会影响contentInset.top。
     if (self.marginTop != self.extenScrollView.contentInset.top) {
         self.marginTop = self.extenScrollView.contentInset.top;
@@ -162,7 +161,6 @@ static char Refresh_Key, ScrollView_Key, Block_Key, MarginTop_Key, Animation_Key
 - (void)defaultHandleWithOffSet:(CGFloat)offsetY change:(NSDictionary<NSKeyValueChangeKey,id> *)change {
     // 向下滑动时<0，向上滑动时>0；
     CGFloat defaultoffsetY = offsetY + self.marginTop;
-    NSLog(@"defaultoffsetY===%f",defaultoffsetY);
     /**刷新动作区间**/
     if (defaultoffsetY > self.threshold && defaultoffsetY < 0) {
         [self.refreshView setContentOffset:CGPointMake(0, defaultoffsetY)];
@@ -184,7 +182,6 @@ static char Refresh_Key, ScrollView_Key, Block_Key, MarginTop_Key, Animation_Key
     /**超过/等于 临界点后松手开始刷新，不松手则不刷新**/
     if (defaultoffsetY <= self.threshold && self.refreshView.contentOffset.y == self.threshold) {
         if (self.extenScrollView.isDragging) {
-            //NSLog(@"不刷新");
             //default动作处理
             [self anmiationHandelwithChange:change
                                   andStatus:SWREFRESH_Default
