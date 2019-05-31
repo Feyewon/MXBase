@@ -12,6 +12,8 @@
 #import <DCAlertController.h>
 #import "UIView+SWRefresh.h"
 #import "UIViewController+Addition.h"
+#import <NSString+Addition.h>
+
 @interface MXViewController () <UIScrollViewDelegate>
 
 @end
