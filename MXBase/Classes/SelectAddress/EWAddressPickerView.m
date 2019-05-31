@@ -171,7 +171,7 @@ enum EWLocationPickViewTableViewType: NSUInteger {
 
     rightCancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
     rightCancelButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 42, 11, 18, 18);
-    [rightCancelButton setImage:[UIImage imageNamed:@"BaseVC_cancel"] forState:UIControlStateNormal];
+    [rightCancelButton setTitle:@"取消" forState:UIControlStateNormal];
     [rightCancelButton addTarget:self action:@selector(onClickCancelButton) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:rightCancelButton];
 

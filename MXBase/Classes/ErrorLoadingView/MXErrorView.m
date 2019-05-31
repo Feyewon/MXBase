@@ -10,7 +10,7 @@
 #import "Masonry.h"
 #import "NSString+Addition.h"
 #import "UIColor+Addition.h"
-
+#import "UIImage+Addition.h"
 @interface MXErrorView ()
 
 @property (nonatomic,strong) UIView *topBackgroundView;
@@ -36,8 +36,7 @@
     self.topBackgroundView = [UIView new];
     self.topBackgroundView.backgroundColor = [UIColor clearColor];
     [self addSubview:self.topBackgroundView];
-    
-    UIImage *notifyImage = [UIImage imageNamed:@"request_noNet"];
+    UIImage *notifyImage = [UIImage imageNamed:@"request_noNet" inPodName:@"MXBase" bundleName:@"ErrorLoadingView"];
     self.iconImageView = [[UIImageView alloc] initWithImage:notifyImage];
     [self.topBackgroundView addSubview:self.iconImageView];
     

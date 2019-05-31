@@ -47,6 +47,24 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)imageWithColor:(UIColor *)color;
 
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
+
+
+/**
+ 加载pod中的资源
+ 
+ @param podName pod名
+ @param bundleName resource_bundles中定义的bundlename
+ 
+ @return 图片
+ 
+ 如:
+ refresh.resource_bundles = {
+    'Refresh' => ['MXBase/Assets/Refresh/Refresh.xcassets']
+ }
+ podName = @"MXBase"
+ bundleName = @"Refresh"
+ */
++ (UIImage *)imageNamed:(NSString *)name inPodName:(NSString *)podName bundleName:(NSString *)bundleName;
 @end
 
 NS_ASSUME_NONNULL_END

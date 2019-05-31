@@ -11,6 +11,7 @@
 #import "Masonry.h"
 #import "UIColor+Addition.h"
 #import "MXMacro.h"
+#import "UIImage+Addition.h"
 
 @interface DCAlertBackgroundViewV2()
 @property (nonatomic,strong) UILabel *titleLabel;
@@ -125,7 +126,7 @@
     }
     
     if(self.closeButton){
-        [self.closeButton setBackgroundImage:[UIImage imageNamed:@"alert_close"] forState:UIControlStateNormal];
+        [self.closeButton setBackgroundImage:[UIImage imageNamed:@"alert_close" inPodName:@"MXBase" bundleName:@"Alert"] forState:UIControlStateNormal];
     }
 }
 
