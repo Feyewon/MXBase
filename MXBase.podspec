@@ -137,9 +137,6 @@ end
 
 s.subspec 'SelectAddress' do |selectAddress|
     selectAddress.source_files = 'MXBase/Classes/SelectAddress/**/*'
-    selectAddress.resource_bundles = {
-        'SelectAddress' => ['MXBase/Assets/SelectAddress.xcassets']
-    }
 end
 
 s.subspec 'Pickers' do |pickers|
