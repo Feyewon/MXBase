@@ -102,7 +102,6 @@
 -(UIImageView *)logoImageView{
     if (!_logoImageView) {
         _logoImageView = [UIImageView new];
-        _logoImageView.image = [UIImage imageNamed:@"booking_alert_icon_success"];
     }
     return _logoImageView;
 }

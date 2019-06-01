@@ -10,7 +10,7 @@
 #import "MJRefresh.h"
 #import "NSObject+YYAdd.h"
 #import "UIColor+Addition.h"
-
+#import "UIImage+Addition.h"
 @implementation UIScrollView (MCRefreshWithTask)
 static NSString *propertyKey = @"propertyKey";
 - (void)setTaskDelegate:(id<MCRefreshTaskDelegate>)taskDelegate {
@@ -201,7 +201,7 @@ static NSString *propertyKey = @"propertyKey";
 - (NSMutableArray *)loadingImageArray {
     NSMutableArray *_loadingImageArray = [NSMutableArray array];
     for (int i = 0; i < 50; i++) {
-        [_loadingImageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"Comp 5_000%d",i+44]]];
+        [_loadingImageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"Comp 5_000%d",i+44] inPodName:@"MXBase" bundleName:@"Refresh"]];
     }
     return _loadingImageArray;
 }

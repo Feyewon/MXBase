@@ -7,8 +7,14 @@
 //
 
 #import "MXViewController.h"
+#import <Masonry.h>
+#import <UIScrollView+MCRefreshWithTask.h>
+#import <DCAlertController.h>
+#import "UIView+SWRefresh.h"
+#import "UIViewController+Addition.h"
+#import <NSString+Addition.h>
 
-@interface MXViewController ()
+@interface MXViewController () <UIScrollViewDelegate>
 
 @end
 
@@ -17,6 +23,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    [self.view addSubview:scrollView];
+    __weak __typeof(self)weakSelf = self;
+    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(weakSelf.view);
+    }];
+    scrollView.delegate = self;
+    [self.view sw_refreshWithObject:scrollView atPoint:CGPointMake(20, -25) downRefresh:^{
+        
+    }];
+    [self.view beginRefresh];
+    [self showErrorPageWithFreshBlock:nil];
+    [self showHud];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,4 +46,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+}
 @end

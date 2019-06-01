@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
 s.name             = 'MXBase'
-s.version          = '3.3.3'
+s.version          = '3.3.5'
 s.summary          = '基础组件库'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -39,6 +39,9 @@ end
 
 s.subspec 'Category' do |c|
     c.source_files = 'MXBase/Classes/Category/**/*'
+    c.resource_bundles = {
+        'Category' => ['MXBase/Assets/Category.xcassets']
+    }
 end
 
 s.subspec 'Alert' do |alert|
@@ -48,6 +51,9 @@ s.subspec 'Alert' do |alert|
     alert.dependency 'MXBase/Category'
     alert.dependency 'MXBase/AttributeStringTool'
     alert.dependency 'SDCAlertView' , '~> 2.5.4'
+    alert.resource_bundles = {
+        'Alert' => ['MXBase/Assets/Alert.xcassets']
+    }
 end
 
 s.subspec 'System' do |sy|
@@ -68,18 +74,21 @@ end
 
 s.subspec 'ErrorLoadingView' do |errorLoadView|
     errorLoadView.source_files = 'MXBase/Classes/ErrorLoadingView/**/*'
-    errorLoadView.resource_bundles = {
-        'ErrorLoadingView' => ['MXBase/Assets/ErrorLoadingView/*.png']
-    }
     errorLoadView.dependency 'Masonry'
     errorLoadView.dependency 'MBProgressHUD'
     errorLoadView.dependency 'MXBase/Category'
+    errorLoadView.resource_bundles = {
+        'ErrorLoadingView' => ['MXBase/Assets/ErrorLoadingView.xcassets']
+    }
 end
 
 s.subspec 'EmptyView' do |emptyView|
     emptyView.source_files = 'MXBase/Classes/EmptyView/**/*'
     emptyView.dependency 'Masonry'
     emptyView.dependency 'MXBase/Category'
+    emptyView.resource_bundles = {
+        'EmptyView' => ['MXBase/Assets/EmptyView.xcassets']
+    }
 end
 
 s.subspec 'Toast' do |toast|
@@ -90,6 +99,9 @@ s.subspec 'Refresh' do |refresh|
     refresh.source_files = 'MXBase/Classes/Refresh/**/*'
     refresh.dependency 'MJRefresh'
     refresh.dependency 'MXBase/Category'
+    refresh.resource_bundles = {
+      'Refresh' => ['MXBase/Assets/Refresh.xcassets']
+    }
 end
 
 s.subspec 'BeeHive' do |bh|

@@ -9,7 +9,7 @@
 #import "MXLoadingView.h"
 #import "FBShimmeringView.h"
 #import "Masonry.h"
-
+#import "UIImage+Addition.h"
 @implementation MXLoadingView {
     UIImageView *_icon;
 }
@@ -48,7 +48,8 @@
             shimmeringView.shimmering                  = YES;
             UIView *view                               = [UIView new];
             view.backgroundColor                       = [UIColor clearColor];
-            _icon                                      = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LOADING_ICON"]];
+            
+            _icon                                      = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LOADING_ICON" inPodName:@"MXBase" bundleName:@"ErrorLoadingView"]];
             _icon.backgroundColor                      = [UIColor clearColor];
             shimmeringView.contentView                 = view;
             

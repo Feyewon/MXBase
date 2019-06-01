@@ -10,7 +10,7 @@
 #import "Masonry.h"
 #import "UIColor+Addition.h"
 #import <objc/runtime.h>
-
+#import "UIImage+Addition.h"
 @interface KHEmptyView : UIView
 
 @property (nonatomic, strong) UIImageView *imageView;
@@ -37,7 +37,6 @@
         UIImageView *imgV = [[UIImageView alloc] init];
         imgV.contentMode = UIViewContentModeScaleAspectFill;
         imgV.layer.masksToBounds = YES;
-        imgV.image = [UIImage imageNamed:@"content_noData"];
         imgV;
     });
     

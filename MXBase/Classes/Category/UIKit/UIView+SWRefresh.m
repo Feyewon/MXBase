@@ -8,7 +8,7 @@
 
 #import "UIView+SWRefresh.h"
 #import <objc/runtime.h>
-
+#import "UIImage+Addition.h"
 #define iphoneHeight ([UIScreen mainScreen].bounds.size.height)
 #define iphoneWidth ([UIScreen mainScreen].bounds.size.width)
 #define iPhoneXx (((iphoneWidth == 375.f && iphoneHeight == 812.f) || (iphoneWidth == 414.f && iphoneHeight == 896.f)) ? YES : NO)
@@ -397,7 +397,7 @@ static char Refresh_Key, ScrollView_Key, Block_Key, MarginTop_Key, Animation_Key
                                                                     self.frame.size.height)];
     }
     _refreshIcon.backgroundColor = [UIColor clearColor];
-    _refreshIcon.image = [UIImage imageNamed:@"user_refresh"];
+    _refreshIcon.image = [UIImage imageNamed:@"user_refresh" inPodName:@"MXBase" bundleName:@"Category"];
     _refreshIcon.contentMode = UIViewContentModeScaleAspectFit;
     _refreshIcon.clipsToBounds = YES;
     _refreshIcon.layer.cornerRadius = self.frame.size.width/2.0;
