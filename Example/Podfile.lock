@@ -5,76 +5,70 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.17)
   - MJRefresh (3.2.0)
-  - MXBase (3.3.2):
-    - MXBase/Alert (= 3.3.2)
-    - MXBase/AttributeStringTool (= 3.3.2)
-    - MXBase/Base (= 3.3.2)
-    - MXBase/BeeHive (= 3.3.2)
-    - MXBase/BlockTool (= 3.3.2)
-    - MXBase/Category (= 3.3.2)
-    - MXBase/CustomView (= 3.3.2)
-    - MXBase/EmptyView (= 3.3.2)
-    - MXBase/ErrorLoadingView (= 3.3.2)
-    - MXBase/Helpers (= 3.3.2)
-    - MXBase/KvoController (= 3.3.2)
-    - MXBase/MenuPage (= 3.3.2)
-    - MXBase/NavigationVC (= 3.3.2)
-    - MXBase/Parser (= 3.3.2)
-    - MXBase/PhotoLibrary (= 3.3.2)
-    - MXBase/Pickers (= 3.3.2)
-    - MXBase/Refresh (= 3.3.2)
-    - MXBase/SelectAddress (= 3.3.2)
-    - MXBase/System (= 3.3.2)
-<<<<<<< HEAD
-    - MXBase/TagView (= 3.3.2)
-=======
->>>>>>> b9e92e1ea1f68c040d1c666bb279b4ce4ff6039f
-    - MXBase/Toast (= 3.3.2)
-  - MXBase/Alert (3.3.2):
+  - MXBase (3.3.5):
+    - MXBase/Alert (= 3.3.5)
+    - MXBase/AttributeStringTool (= 3.3.5)
+    - MXBase/Base (= 3.3.5)
+    - MXBase/BeeHive (= 3.3.5)
+    - MXBase/BlockTool (= 3.3.5)
+    - MXBase/Category (= 3.3.5)
+    - MXBase/CustomView (= 3.3.5)
+    - MXBase/EmptyView (= 3.3.5)
+    - MXBase/ErrorLoadingView (= 3.3.5)
+    - MXBase/Helpers (= 3.3.5)
+    - MXBase/KvoController (= 3.3.5)
+    - MXBase/MenuPage (= 3.3.5)
+    - MXBase/NavigationVC (= 3.3.5)
+    - MXBase/Parser (= 3.3.5)
+    - MXBase/PhotoLibrary (= 3.3.5)
+    - MXBase/Pickers (= 3.3.5)
+    - MXBase/Refresh (= 3.3.5)
+    - MXBase/SelectAddress (= 3.3.5)
+    - MXBase/System (= 3.3.5)
+    - MXBase/TagView (= 3.3.5)
+    - MXBase/Toast (= 3.3.5)
+  - MXBase/Alert (3.3.5):
     - Masonry
     - MXBase/AttributeStringTool
     - MXBase/Base
     - MXBase/Category
     - SDCAlertView (~> 2.5.4)
-  - MXBase/AttributeStringTool (3.3.2)
-  - MXBase/Base (3.3.2):
+  - MXBase/AttributeStringTool (3.3.5)
+  - MXBase/Base (3.3.5):
     - UICKeyChainStore
-  - MXBase/BeeHive (3.3.2):
+  - MXBase/BeeHive (3.3.5):
     - BeeHive
-  - MXBase/BlockTool (3.3.2)
-  - MXBase/Category (3.3.2)
-  - MXBase/CustomView (3.3.2)
-  - MXBase/EmptyView (3.3.2):
+  - MXBase/BlockTool (3.3.5)
+  - MXBase/Category (3.3.5)
+  - MXBase/CustomView (3.3.5)
+  - MXBase/EmptyView (3.3.5):
     - Masonry
     - MXBase/Category
-  - MXBase/ErrorLoadingView (3.3.2):
+  - MXBase/ErrorLoadingView (3.3.5):
     - Masonry
     - MBProgressHUD
     - MXBase/Category
-  - MXBase/Helpers (3.3.2)
-  - MXBase/KvoController (3.3.2)
-  - MXBase/MenuPage (3.3.2):
+  - MXBase/Helpers (3.3.5)
+  - MXBase/KvoController (3.3.5)
+  - MXBase/MenuPage (3.3.5):
     - WMPageController
-  - MXBase/NavigationVC (3.3.2):
+  - MXBase/NavigationVC (3.3.5):
     - MXBase/Category
-  - MXBase/Parser (3.3.2):
+  - MXBase/Parser (3.3.5):
     - MJExtension
-  - MXBase/PhotoLibrary (3.3.2):
+  - MXBase/PhotoLibrary (3.3.5):
     - MXBase/Base
     - MXBase/Category
-  - MXBase/Pickers (3.3.2)
-  - MXBase/Refresh (3.3.2):
+  - MXBase/Pickers (3.3.5)
+  - MXBase/Refresh (3.3.5):
     - MJRefresh
     - MXBase/Category
-  - MXBase/SelectAddress (3.3.2)
-  - MXBase/System (3.3.2):
+  - MXBase/SelectAddress (3.3.5)
+  - MXBase/System (3.3.5):
     - AFNetworking/Reachability
     - MXBase/Base
-<<<<<<< HEAD
-  - MXBase/TagView (3.3.2)
-=======
->>>>>>> b9e92e1ea1f68c040d1c666bb279b4ce4ff6039f
-  - MXBase/Toast (3.3.2)
+  - MXBase/TagView (3.3.5)
+  - MXBase/Toast (3.3.5)
   - RBBAnimation (0.4.0)
   - SDCAlertView (2.5.4):
     - RBBAnimation (~> 0.3)
@@ -111,11 +105,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
-<<<<<<< HEAD
-  MXBase: 970a49242d30c5b45560d366cccfaf4a565f954d
-=======
-  MXBase: c7b85dc7d0b77933701199217b0ea7a45313dd1a
->>>>>>> b9e92e1ea1f68c040d1c666bb279b4ce4ff6039f
+  MXBase: 9531e6f76cae2b3e605eb0be0b12237791aa5baa
   RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
   SDCAlertView: 2e2b0ecc5f1ec367e45d83efa2e512688ca7fa55
   SDCAutoLayout: e6885bb39ab8e2ec2ff84d158f38035f025f7420
