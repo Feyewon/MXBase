@@ -25,6 +25,10 @@ PODS:
     - MXBase/Refresh (= 3.3.2)
     - MXBase/SelectAddress (= 3.3.2)
     - MXBase/System (= 3.3.2)
+<<<<<<< HEAD
+    - MXBase/TagView (= 3.3.2)
+=======
+>>>>>>> b9e92e1ea1f68c040d1c666bb279b4ce4ff6039f
     - MXBase/Toast (= 3.3.2)
   - MXBase/Alert (3.3.2):
     - Masonry
@@ -66,6 +70,10 @@ PODS:
   - MXBase/System (3.3.2):
     - AFNetworking/Reachability
     - MXBase/Base
+<<<<<<< HEAD
+  - MXBase/TagView (3.3.2)
+=======
+>>>>>>> b9e92e1ea1f68c040d1c666bb279b4ce4ff6039f
   - MXBase/Toast (3.3.2)
   - RBBAnimation (0.4.0)
   - SDCAlertView (2.5.4):
@@ -103,7 +111,11 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+<<<<<<< HEAD
+  MXBase: 970a49242d30c5b45560d366cccfaf4a565f954d
+=======
   MXBase: c7b85dc7d0b77933701199217b0ea7a45313dd1a
+>>>>>>> b9e92e1ea1f68c040d1c666bb279b4ce4ff6039f
   RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
   SDCAlertView: 2e2b0ecc5f1ec367e45d83efa2e512688ca7fa55
   SDCAutoLayout: e6885bb39ab8e2ec2ff84d158f38035f025f7420
