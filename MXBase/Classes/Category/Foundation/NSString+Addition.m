@@ -403,11 +403,11 @@
     NSDateComponents *dateComponents = [self fetchDateInfoWithTimeStamp:timeStamp];
 
     if (isToday) {
-        return [NSString stringWithFormat:@"%02ld:%02ld", (long)dateComponents.hour, (long)dateComponents.minute];
+        return [NSString stringWithFormat:@"今天%02ld:%02ld", (long)dateComponents.hour, (long)dateComponents.minute];
     } else if (isThisYear) {
         return [NSString stringWithFormat:@"%02ld-%02ld, %02ld:%02ld", (long)dateComponents.year, (long)dateComponents.month, (long)dateComponents.hour, (long)dateComponents.minute];
     } else {
-        return [NSString stringWithFormat:@"%02ld-%02ld-%02ld, %l02d:%02ld", (long)dateComponents.year, (long)dateComponents.month, (long)dateComponents.day, (long)dateComponents.hour, (long)dateComponents.minute];
+        return [NSString stringWithFormat:@"%02ld-%02ld-%02ld, %02ld:%02ld", (long)dateComponents.year, (long)dateComponents.month, (long)dateComponents.day, (long)dateComponents.hour, (long)dateComponents.minute];
     }
 }
 
