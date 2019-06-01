@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
 s.name             = 'MXBase'
-s.version          = '3.3.4'
+s.version          = '3.3.5'
 s.summary          = '基础组件库'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -141,6 +141,10 @@ end
 
 s.subspec 'Pickers' do |pickers|
     pickers.source_files = 'MXBase/Classes/Pickers/**/*'
+end
+
+s.subspec 'TagView' do |tagView|
+    tagView.source_files = 'MXBase/Classes/TagView/**/*'
 end
 
 s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
