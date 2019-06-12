@@ -33,6 +33,7 @@
 }
 
 - (void)buildSubviews {
+    self.backgroundColor = [UIColor getColor:@"f5f6f7"];
     self.imageView = ({
         UIImageView *imgV = [[UIImageView alloc] init];
         imgV.contentMode = UIViewContentModeScaleAspectFill;
