@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
 s.name             = 'MXBase'
-s.version          = '3.3.6'
+s.version          = '0.0.1'
 s.summary          = '基础组件库'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,11 +17,11 @@ s.summary          = '基础组件库'
 s.description      = <<-DESC
 这是一个基础组件库
 DESC
-s.homepage         = 'http://120.55.102.11:8192/iOSCoder/MXBase'
+s.homepage         = 'https://github.com/Feyewon/MXBase'
 # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Feyewon' => '1497332442@qq.com' }
-s.source           = { :git => 'git@120.55.102.11:iOSCoder/MXBase.git', :tag => s.version.to_s }
+s.source           = { :git => 'https://github.com/Feyewon/MXBase.git', :tag => s.version.to_s }
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 s.ios.deployment_target = '8.0'
 
